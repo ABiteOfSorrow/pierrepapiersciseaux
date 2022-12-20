@@ -1,4 +1,4 @@
-import HandIcon from "./HandIcon";
+import HandButton from "./HandButton";
 
 const WINS = {
     pierre: 'ciseaux',
@@ -28,7 +28,9 @@ function handleClick() {
 function App() {
     return (
         <div>
-            <HandIcon />
+            <HandButton value="rock"/>
+            <HandButton value="scissor"/>
+            <HandButton value="paper"/>
     <h1 id="title">Pierre-Papier-Ciseaux</h1>
     <h2>{getResult(me, other)}</h2>
     <button className="hand" onClick={handleClick}>Pierre</button>
