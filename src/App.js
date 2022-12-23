@@ -17,20 +17,24 @@ function App() {
 
     const [myHand, setMyHand] = useState('pierre');
     const [otherHand, setOtherHand] = useState('pierre');
-
-
-    let handleClearClick = () => {
-        setMyHand('pierre');
-        setOtherHand('pierre');
-        console.log("Clear");
-    }
+    const [handHistory, setHandHistory] = useState([])
 
     function handleButtonClick(nextMyHand) {
         console.log(nextMyHand);
         let nextOtherHand = generateRandomHand();
+        let nextHistory = getResult(nextMyHand, nextOtherHand)
         setMyHand(nextMyHand);
         setOtherHand(nextOtherHand);
+        setHandHistory([...handHistory, nextHistory]);
     }
+
+    let handleClearClick = () => {
+        setMyHand('pierre');
+        setOtherHand('pierre');
+        setHandHistory([]);
+        console.log("Clear");
+    }
+
 
     return (
         <div>
@@ -47,7 +51,7 @@ function App() {
                 vs
                 <HandIcon value={otherHand}/>
             </div>
-
+            <h3>{handHistory.join(', ')}</h3>
             <HandButton value="pierre" onClick={handleButtonClick}/>
             <HandButton value="ciseaux" onClick={handleButtonClick}/>
             <HandButton value="papier" onClick={handleButtonClick}/>
