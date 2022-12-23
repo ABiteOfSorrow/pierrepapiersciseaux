@@ -29,3 +29,6 @@ export default Dice;
 
  4) 컴포넌트에 지정해준 속성을 props라고 부른다. (각각의 속성은 prop(erty))
     ex) <Dice color="blue">
+
+
+

@@ -1,11 +1,11 @@
-import rockImg from './assets/rock.svg'
-import paperImg from './assets/paper.svg'
-import scissorImg from './assets/scissor.svg'
+import pierreImg from './assets/pierre.svg'
+import papierImg from './assets/papier.svg'
+import ciseauxImg from './assets/ciseaux.svg'
 
 const HAND_IMAGES = {
-    rock: rockImg,
-    paper: paperImg,
-    scissor: scissorImg
+    pierre: pierreImg,
+    papier: papierImg,
+    ciseaux: ciseauxImg
 }
 
 function HandIcon(props) {
