@@ -31,4 +31,19 @@ export default Dice;
     ex) <Dice color="blue">
 
 
+2. 값이 변하는 요소를 처리할때는 onChange를 사용 (자바스크립트의 onInput과 같음)
 
+<input type="number" value={bet} min={1} max={9} onChange={handleBetChange}></input>
+
+  const handleBetChange = (e) => {
+    const num = Number(e.target.value);
+    setBet(num);
+  };
+    - 이때 가져오는 값은 문자열이 되므로 다른 타입을 원하면 변경해줘야함
+
+e.target.value 의 값을 관찰해보면 아시겠지만, input 태그에 min, max, step 이 지정되었더라도 
+항상 정수만 입력 값으로 들어오는 게 아닌데요. 입력값은 크게 세 가지 경우로 나눌 수 있습니다.
+
+    정수 문자열
+    소수점 숫자 문자열
+    "", 빈 문자열 (숫자가 아닌 값을 입력한 경우) - 숫자가 아닌 잘못된 문자열의 경우
