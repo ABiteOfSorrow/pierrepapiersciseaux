@@ -1,6 +1,7 @@
-import pierreImg from './assets/pierre.svg'
-import papierImg from './assets/papier.svg'
-import ciseauxImg from './assets/ciseaux.svg'
+import pierreImg from './assets/pierre.svg';
+import papierImg from './assets/papier.svg';
+import ciseauxImg from './assets/ciseaux.svg';
+import './HandButton.css';
 
 const HAND_IMAGES = {
     pierre: pierreImg,
@@ -8,10 +9,10 @@ const HAND_IMAGES = {
     ciseaux: ciseauxImg
 }
 
-function HandIcon(props) {
+function HandIcon({value, className = ''}) {
 
-    const SRC = HAND_IMAGES[props.value];
-    return <img src={SRC} alt={props.value} />
+    const SRC = HAND_IMAGES[value];
+    return <img src={SRC} alt={value} className={className}/>
 }
 
 export default HandIcon;

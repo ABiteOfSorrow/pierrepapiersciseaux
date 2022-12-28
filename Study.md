@@ -51,3 +51,9 @@ e.target.value 의 값을 관찰해보면 아시겠지만, input 태그에 min, 
 
 3. CSS 파일을 가져올때는 import 후에 바로 파일경로를 쓴다.
  ex) import './index.css'
+
+ 3-1. CSS 파일을 가져와서 클래스 네임을 사용하려면 중간에 공백이 필요하다.
+ ex)     const className = `Button ${color}`;   => Button.blue or .red
+
+ 4. CSS 스타일 속성중에 margin처럼 요소 외부에 영향을 주는건 컴포넌트 외부보다 외부에서 정리하는게 좋다.
+    - 부모에서 자식들을 직접 관리할 수 있기 때문에 더 정확하게 원하는 수치로 변경 가능
