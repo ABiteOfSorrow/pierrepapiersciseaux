@@ -1,7 +1,7 @@
 import pierreImg from './assets/pierre.svg';
 import papierImg from './assets/papier.svg';
 import ciseauxImg from './assets/ciseaux.svg';
-import './HandButton.css';
+import "./App.css";
 
 const HAND_IMAGES = {
     pierre: pierreImg,

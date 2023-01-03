@@ -1,5 +1,5 @@
 import HandIcon from "./HandIcon";
-import './HandButton.css';
+import "./App.css";
 
 
 function HandButton({value, onClick}) {
