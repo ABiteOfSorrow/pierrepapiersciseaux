@@ -107,7 +107,7 @@ function App() {
             </div>
 
             <div className="App-bet">
-                <span>Multiples</span>
+                <span>Multiplier</span>
                 <input type="number" value={bet} min={1} max={9} onChange={handleBetChange}></input>
                 <span>Fois</span>
             </div>
