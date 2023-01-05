@@ -82,12 +82,12 @@ function App() {
             <div className="App-scores">
                 <div className="Score">
                     <div class="Score-num">{myScore}</div>
-                    <div className="Score-name">나</div>
+                    <div className="Score-name">Moi</div>
                 </div>
                 <div className="App-versus"> : </div>
                 <div className="Score">
                     <div class="Score-num">{otherScore}</div>
-                    <div className="Score-name">상대</div>
+                    <div className="Score-name">Compétiteur</div>
                 </div>
             </div>   
 
